@@ -23,10 +23,10 @@ app.get("/", (req, res) => {
 });
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "Hasset2",
-  password: "Nathan020814",
-  database: "myDBuser2",
+  host: "82.197.82.42",
+  user: "u677091426_himeynathan",
+  password: "kN5kYzJp0/H+",
+  database: "u677091426_himeynathan",
   socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
 });
 // // connecting to MySQL database

@@ -27,7 +27,7 @@ const connection = mysql.createConnection({
   user: "u677091426_himeynathan",
   password: "kN5kYzJp0/H+",
   database: "u677091426_himeynathan",
-  socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
+  // socketPath: "/Applications/MAMP/tmp/mysql/mysql.sock",
 });
 // // connecting to MySQL database
 connection.connect((err) => {
@@ -42,6 +42,10 @@ app.get("/iphones", (req, res) =>{
     let dataquery = `SELECT * FROM products JOIN description JOIN productPrice ON products.product_id= description.product_id AND products.product_id= productPrice.product_id `;
     connection.query(dataquery, (err,result) =>{
       console.log(result); 
+      if(err){
+        console.log(err);
+        
+      }
      
       res.send(result);
     })
